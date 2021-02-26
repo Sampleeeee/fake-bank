@@ -6,10 +6,10 @@ Because I made this while learning, some of the stuff could probably be more eff
 Styling based off https://github.com/jakejarvis/kitboga-bank
 
 # Starting
-Download the .NET SDK from (here)[https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.103-windows-x64-installer]
-Clone this repository (`git clone https://github.com/Sampleeeee/fake-bank`)
-Enter the folder of the repository and type `dotnet run`. (If you know what you're doing and want to make changes live, type `dotnet watch run`)
-Configuration can be found in Data/BrainService.cs.
+1. Download the .NET SDK from (here)[https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.103-windows-x64-installer]
+2. Clone this repository (`git clone https://github.com/Sampleeeee/fake-bank`)
+3. Enter the folder of the repository and type `dotnet run`. (If you know what you're doing and want to make changes live, type `dotnet watch run`)
+4. Configuration can be found in Data/BrainService.cs.
 
 # Configuration
 Better configuration coming soon

@@ -16,36 +16,3 @@ Better configuration coming soon
 
 # Themes
 Themes coming soon
-
-# Todo
-- [x] Base Components
-    - [x] Pre-header
-    - [x] Navbar
-        - [x] Layout
-        - [x] If logged in, change items
-    - [x] Footer
-- [x] Homepage
-	- [x] Dog
-		- [x] Layout
-		- [x] Login Functionality
-            - [x] Captcha
-	- [x] Mobile Banking
-	- [x] Three Things
-	- [x] Random Text
-	- [x] Rates
-- [ ] Account Page
-    - [ ] Agree To Cookies
-	- [x] Welcome Back
-	- [x] Inbox
-	- [x] Quick Links
-	- [x] Advertisement
-	- [x] Button Group
-	- [x] Show Accounts
-        - [x] Backend Functionality
-- [x] Transfers
-	- [x] Layout
-    - [x] Success Screen
-	- [x] Backend Functionality
-- [ ] Other
-    - [ ] Inactivity Screen
-    - [ ] Themes

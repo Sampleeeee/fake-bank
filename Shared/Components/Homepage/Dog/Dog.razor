@@ -1,0 +1,111 @@
+<div class="dog">
+    <div class="container">
+        <div id="sideswap" class="row">
+            <div class="col-md-4">
+                <div class="epic">
+                    <form>
+                        <h4 class="ltitle">Online Banking</h4>
+                        <select>
+                            <option>Personal</option>
+                            <option>Business</option>
+                            <option>Investing</option>
+                        </select>
+                        <input type="text" placeholder="username" style="@usernameStyle" @onchange="@(e => Username = e.Value.ToString())">
+                        <input type="password" style="margin-top: 8px" placeholder="password">
+                        @if (showLoading)
+                        {
+                            <div id="loading">Please Wait...</div>
+                        }
+                    </form>
+                    <div class="spacer"></div>
+                    <button @onclick="@(e => OnLoginClicked())">Login</button>
+                    <a class="a-style" style="color: var(--secondary-bg-color); margin-left: 0.5em">Apply Today</a>
+                </div>
+            </div>
+            <div class="col-md-8 headline">
+                <h1 style="font-size: 2rem;">@HeadlineText</h1>
+                <h4>@HeadlineContent</h4>
+                <br />
+                <div id="mobile" class="darker">
+                    <h3>Mobile App</h3>
+                    <p>@MobileText</p>
+                    <a class="a-style" style="color: cyan">Try Mobile Banking</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (showTwoFactor)
+{
+    <div id="twofactor" class="modal show" style="display: block" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Two Factor Auth</h5>
+                    <button type="button" class="close" data-dismiss="modal" @onclick="@(e => HideTwoFactor())">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Please enter the code that was sent to your phone below:
+                    <br />
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="_ _ _ _ _ _"
+                            @onchange="@(e => TwoFactorValue = e.Value.ToString())" />
+
+                    </div>
+                    @if (showBadcode)
+                    {
+                        <small style="color: red">
+                            The authentication code you entered is invalid. Please try again.
+                        </small>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" @onclick="@(async e => await SubmitTwoFactor())">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@if (showMathProblem)
+{
+    <div id="mathquiz" class="modal show" style="display: block" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">For your safety...</h5>
+                    <button type="button" class="close" data-dismiss="modal" @onclick="@(e => HideMath())">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Please solve the following simple math problem:
+                    <br />
+                    <div class="form-group">
+                        <code>@mathProblem</code>
+                        <div id="quiz">
+                            <input type="text" placeholder="answer"
+                                @onchange="@(e => MathAnswerValue = e.Value.ToString())" />
+                        </div>
+                    </div>
+                    @if (showBadcode)
+                    {
+                        <small style="color: red">
+                            The answer is incorrect, please try again.
+                        </small>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" @onclick="@(async e => await SubmitMathProblem())">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@if (showMathProblem || showTwoFactor)
+{
+    <div class="modal-backdrop fade show"></div>
+}

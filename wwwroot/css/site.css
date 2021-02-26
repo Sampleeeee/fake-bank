@@ -1,0 +1,75 @@
+@import url("open-iconic/font/css/open-iconic-bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fira Sans|Roboto&display=swap");
+
+:root {
+    --primary-bg-color: #8bc34a;
+    --secondary-bg-color: #4caf50;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Poppins";
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+header h2 {
+    font-family: "Fira Sans", "Arial" !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+nav,
+nav a {
+    font-family: "Roboto", "Verdana" !important;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+ul.vertical {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.vertical li {
+    width: 100%;
+    padding: 0.8em;
+    background-color: var(--primary-bg-color);
+    color: white;
+}
+
+ul.vertical li span {
+    float: right;
+}
+
+ul.vertical li a {
+    color: #fff;
+}
+
+.a-style:hover {
+    text-decoration: underline !important;
+    cursor: pointer;
+}

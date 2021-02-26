@@ -1,0 +1,87 @@
+@page "/transactions/{Digits:int}"
+
+@if (Account != null)
+{
+    <div class="container">
+        <div id="table-header">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>@($"Account ****{Account.Last4Digits} History")</h2>
+                </div>
+                <div class="col-sm-4">
+                    <h5>@($"Available Balance: {Account.FormattedBalance}")</h5>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope>Date</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (User.Account.Transaction transaction in Account.PastTransactions.OrderByDescending(x => x.Date))
+                {
+                    <tr>
+                        <td>@transaction.Date.ToString("MM/dd")</td>
+                        <td>@transaction.Description</td>
+                        <td>@transaction.Type</td>
+                        <td>@transaction.FormattedAmount</td>
+                        <td>
+                            <a class="a-style" style="color: red">Dispute</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <p>
+            We only display the past 30 days of account activity in your web portal. Please use the mobile banking app for
+            the full experience.
+        </p>
+    </div>
+}
+else if (Digits == -1)
+{
+    <div class="container">
+        <div id="table-header">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2>@($"Account History")</h2>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope>Date</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (User.Account.Transaction transaction in AllTransactions().OrderByDescending(x => x.Date))
+                {
+                    <tr>
+                        <td>@transaction.Date.ToString("MM/dd")</td>
+                        <td>@transaction.Description</td>
+                        <td>@transaction.Type</td>
+                        <td>@transaction.FormattedAmount</td>
+                        <td>
+                            <a class="a-style" style="color: red">Dispute</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <p>
+            We only display the past 30 days of account activity in your web portal. Please use the mobile banking app for
+            the full experience.
+        </p>
+    </div>
+}

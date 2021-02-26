@@ -1,0 +1,37 @@
+<div class="row">
+    <div id="account-info">
+        @foreach (User.Account account in Brain.GetCurrentAccounts())
+        {
+            <div class="account-row">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5>
+                            @account.Name
+                            <span>@($"XXXX{account.Last4Digits}")</span>
+                        </h5>
+                        <hr />
+                        <h1>@account.FormattedBalance</h1>
+                    </div>
+
+                    <div class="col-md-4">
+                        <ul class="vertical">
+                            <li>
+                                <a class="a-style" @onclick="@(e => ViewTransactions(account.Last4Digits))">View
+                                    transactions</a>
+                                <span class="oi" data-glyph="caret-right"></span>
+                            </li>
+                            <li>
+                                <a class="a-style" @onclick="@(e => MakeTransfer())">Make a transfer</a>
+                                <span class="oi" data-glyph="caret-right"></span>
+                            </li>
+                            <li>
+                                <a class="a-style moreactions">More actions</a>
+                                <span class="oi" data-glyph="caret-right"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

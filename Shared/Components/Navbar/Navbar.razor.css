@@ -1,0 +1,22 @@
+header {
+    background-color: var(--primary-bg-color);
+    color: #fff;
+    padding: 4px 8px;
+    border-bottom: 1px solid #ccc;
+    font-family: "Abril Fatface";
+}
+
+header .header-menu {
+    padding-top: 0.5em;
+    margin-left: 2em;
+}
+
+header .header-menu nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header .header-menu nav ul li a {
+    color: #1b1b1b;
+    font-family: "poppins";
+}

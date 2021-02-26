@@ -1,0 +1,16 @@
+#table-header {
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+    padding: 1em;
+    margin-top: 1em;
+    position: relative;
+}
+
+/* TODO Figure out how to center this */
+#table-header .row .col-sm-4 {
+    text-align: right;
+}
+
+.container {
+    font-family: "Roboto", sans-serif;
+}

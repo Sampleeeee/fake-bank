@@ -1,0 +1,36 @@
+@page "/account"
+@using Bank.Shared.Components.Account.Inbox
+@using Bank.Shared.Components.Account.QuickLinks
+@using Bank.Shared.Components.Account.Advertisement
+@using Bank.Shared.Components.Account.ButtonGroup
+@using Bank.Shared.Components.Account.AccountInfo
+
+@if (Brain.GetCurrentUser() != null)
+{
+    <div class="container" id="stuff">
+        @*
+            This can be with one of the themes
+
+            <div id="loginmessage">
+            Welcome Back! Last Login: @LastLoginDate
+            </div>
+        *@
+
+        <div id="main-row" class="row">
+            <div class="col-md-4">
+                @*
+                    TODO Only show either QuickLinks or Advertisement
+                    Can be done once themes are implemented
+                *@
+                <Inbox />
+                <QuickLinks />
+                <Advertisement />
+                @* <button class="btn-warning">Contact Support</button> *@
+            </div>
+            <div class="col-md-8">
+                <ButtonGroup />
+                <AccountInfo />
+            </div>
+        </div>
+    </div>
+}

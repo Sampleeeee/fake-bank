@@ -1,0 +1,39 @@
+#transfer-form {
+    margin-top: 1em;
+}
+
+#filler {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#filler .oi {
+    margin-right: 1em;
+    float: none;
+}
+
+#filler ul#vert li {
+    width: 100%;
+}
+
+ul#vert {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul#vert li {
+    width: 100%;
+    padding: 0.8em;
+    background-color: var(--primary-bg-color);
+    color: white;
+}
+
+ul#vert li span {
+    float: right;
+}
+
+ul#vert li a {
+    color: #fff;
+}

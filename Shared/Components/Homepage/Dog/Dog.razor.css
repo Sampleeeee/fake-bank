@@ -1,0 +1,79 @@
+.dog {
+    background-image: url("https://source.unsplash.com/collection/573009");
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    min-height: 300px;
+}
+.dog .ltitle {
+    display: none;
+}
+.dog .darker {
+    background-color: #202020;
+    color: #fff;
+    background: #444;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #444 0%, #141414 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #444 0%, #141414 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #444 0%, #141414 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#141414',GradientType=0);
+    /* IE6-9 */
+}
+.dog .epic {
+    background-color: #202020b3;
+    padding: 2em;
+    border-bottom: 10px solid var(--primary-bg-color);
+    position: absolute;
+    top: 1.8em;
+}
+
+#loading {
+    position: absolute;
+    z-index: 999;
+    top: 20%;
+    left: 50%;
+    width: 420px;
+    margin-left: -210px;
+    height: 69px;
+    border: 1px solid #999;
+    padding: 1em 2em;
+    background-color: #fff;
+    box-shadow: 1px 0px 2px #1b1b1b;
+    text-align: center;
+}
+
+.dog .epic select,
+.dog .epic input {
+    width: 100%;
+}
+.dog .epic select {
+    margin-bottom: 10px;
+}
+.dog .epic .fault {
+    border: 5px solid red;
+}
+.dog .headline {
+    color: #fff;
+    padding: 3em 5em;
+    filter: drop-shadow(1px 1px 3px #000 9);
+}
+.dog .headline #mobile {
+    position: absolute;
+    bottom: -14em;
+    width: 350px;
+    padding: 2em;
+    border-radius: 12px;
+    right: 0;
+}
+.dog .headline #mobile img {
+    height: 40px;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+.dog .spacer {
+    height: 1.5em;
+    width: 100%;
+}

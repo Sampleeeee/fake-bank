@@ -1,0 +1,17 @@
+#account-info {
+    width: 100%;
+}
+
+.account-row {
+    border-top: 4px solid var(--secondary-bg-color);
+    margin-bottom: 2em;
+    background-color: #f5f5f5;
+}
+.account-row h5 span {
+    color: #ccc;
+    font-size: 0.7em;
+}
+
+.account-row .col-md-8 {
+    padding: 1em 2em;
+}

@@ -1,0 +1,50 @@
+@namespace Bank.Shared.Components.Navbar
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="margin-top: 8px">@BankName</h2>
+            </div>
+            <div class="header-menu">
+                <nav>
+                    <ul class="nav mx-auto">
+                        @if (!Brain.LoggedIn)
+                        {
+                            <li class="nav-item">
+                                <a class="a-style nav-link">Personal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-style nav-link">Business</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-style nav-link">Investing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-style nav-link">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-style nav-link">About</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="a-style nav-link"
+                                    @onclick="@(e => Navigation.NavigateTo("/account"))">Accounts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-style nav-link"
+                                    @onclick="@(e => Navigation.NavigateTo("/transactions/-1"))">Transactions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-style nav-link"
+                                    @onclick="@(e => Navigation.NavigateTo("/transfer"))">Transfer</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>

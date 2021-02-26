@@ -1,0 +1,9 @@
+#threethings {
+    background-color: var(--primary-bg-color);
+    padding: 1em 0;
+    color: #fff;
+}
+
+#threethings p {
+    width: 70%;
+}

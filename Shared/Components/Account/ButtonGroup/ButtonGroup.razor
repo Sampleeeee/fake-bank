@@ -1,0 +1,33 @@
+@inject NavigationManager Navigation
+
+<div id="filler">
+    <div class="row">
+        <ul class="vertical">
+            <li>
+                <span class="oi" data-glyph="book"></span>
+                <a class="a-style" @onclick='@(e => Navigation.NavigateTo("/transactions/-1"))'>All transactions</a>
+            </li>
+            <li>
+                <span class="oi" data-glyph="calculator"></span>
+                <a class="a-style" @onclick='@(e => Navigation.NavigateTo("/transfer"))'>Make a transfer</a>
+            </li>
+            <li>
+                <span class="oi" data-glyph="briefcase"></span>
+                <a class="a-style">Contact support</a>
+            </li>
+            <li>
+                <span class="oi" data-glyph="info"></span>
+                <a class="a-style">Edit or add alerts</a>
+            </li>
+            <li>
+                <span class="oi" data-glyph="document"></span>
+                <a class="a-style">Go paperless</a>
+            </li>
+            <li>
+                <span class="oi" data-glyph="grid-three-up"></span>
+                <a class="a-style">Edit profile</a>
+            </li>
+        </ul>
+    </div>
+
+</div>

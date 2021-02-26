@@ -1,0 +1,70 @@
+@page "/transfer"
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <form id="transfer-form">
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Amount</label>
+                    <div class="col-sm-8">
+                        <input type="number" class="form-control" placeholder="0.00" @bind="Amount">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Transfer From</label>
+                    <div class="col-sm-8">
+                        <select class="form-control" @onchange="@(e => TransferFrom = e.Value.ToString())">
+                            @foreach (User.Account account in Brain.GetCurrentAccounts())
+                            {
+                                <option value="@account.Last4Digits">
+                                    @($"{account.Name} (****{account.Last4Digits})")
+                                </option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Transfer To</label>
+                    <div class="col-sm-8">
+                        <select class="form-control" @onchange="@(e => TransferTo = e.Value.ToString())">
+                            @foreach (User.Account account in Brain.GetCurrentAccounts())
+                            {
+                                <option value="@account.Last4Digits">
+                                    @($"{account.Name} (****{account.Last4Digits})")
+                                </option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @* TODO Center this in button *@
+                    <a class="a-style col-sm-4 a-style" style="color: blue">Add External Account</a>
+                    @* TODO Make button have correct size *@
+                    <button class="col-sm-8 btn" type="button" @onclick="@(async e => await OnSubmit())">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4">
+            <div id="filler" style="margin-left: 1em">
+                <div class="row">
+                    <ul id="vert">
+                        @* TODO Change routes *@
+                        <li>
+                            <span class="oi" data-glyph="book"></span>
+                            <a class="a-style" @onclick='@(e => Navigation.NavigateTo("/transactions/-1"))'>All
+                                transactions</a>
+                        </li>
+                        <li>
+                            <span class="oi" data-glyph="calculator"></span>
+                            <a class="a-style">Make a transfer</a>
+                        </li>
+                        <li>
+                            <span class="oi" data-glyph="briefcase"></span>
+                            <a class="a-style">Contact support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

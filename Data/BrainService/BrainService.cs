@@ -7,8 +7,8 @@ namespace Bank.Data
 {
     public partial class BrainService
     {
-        public bool LoggedIn { get; set; } = true;
-        public string CurrentUser { get; set; } = "bmays";
+        public bool LoggedIn { get; set; } = false;
+        public string CurrentUser { get; set; }
         public DateTime LoggedInAt { get; set; }
         public string InactivityDisplay = "none";
 

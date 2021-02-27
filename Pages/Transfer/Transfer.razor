@@ -1,6 +1,6 @@
 @page "/transfer"
 
-<div class="container">
+<div class="container" style="margin-bottom: 60vh">
     <div class="row">
         <div class="col-md-8">
             <form id="transfer-form">
@@ -37,9 +37,8 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    @* TODO Center this in button *@
-                    <Anchor Color="@(Brain.CurrentTheme.AnchorColor)" Class="col-sm-4">Add External Account</Anchor>
-                    @* TODO Make button have correct size *@
+                    <Anchor Color="@(Brain.CurrentTheme.AnchorColor)" Style="padding-top: 0.5em" Class="col-sm-4">Add
+                        External Account</Anchor>
                     <button class="col-sm-8 btn" type="button" @onclick="@(async e => await OnSubmit())">Submit</button>
                 </div>
             </form>

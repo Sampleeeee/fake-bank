@@ -13,13 +13,14 @@ namespace Bank.Shared.Components.Anchor
         [Parameter] public string Color { get; set; } = "#0000EE";
         [Parameter] public string Style { get; set; }
         [Parameter] public string Class { get; set; }
-        [Parameter] public Action<MouseEventArgs> OnClick { get; set; }
+
+        [Parameter] public EventCallback<MouseEventArgs> OnClick { get; set; }
 
         private void OnClicked(MouseEventArgs e)
         {
-            if (OnClick != null)
+            if (OnClick.HasDelegate)
             {
-                OnClick(e);
+                OnClick.InvokeAsync(e);
                 return;
             }
 

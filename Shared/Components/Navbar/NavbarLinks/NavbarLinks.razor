@@ -1,4 +1,5 @@
 @inject BrainService Brain
+@inject NavigationManager Navigation
 
 @if (!Brain.LoggedIn)
 {
@@ -30,5 +31,10 @@ else
     </li>
     <li class="nav-item">
         <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link" Location="/transfer">Transfer</Anchor>
+    </li>
+    <li class="nav-item">
+        <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link"
+            OnClick="@(e => { Brain.Logout(); Navigation.NavigateTo("/"); })">Logout
+        </Anchor>
     </li>
 }

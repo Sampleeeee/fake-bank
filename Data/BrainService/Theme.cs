@@ -41,7 +41,7 @@ namespace Bank.Data
                 AnchorColor2 = "cyan",
                 PreheaderAnchorColor = "white",
                 HeaderAnchorColor = "black",
-                HeaderNameColor = "black",
+                HeaderNameColor = "darkred",
                 FooterColor = "#eee",
                 FooterTextColor = "black",
                 LoginBoxColor = "#202020b3",

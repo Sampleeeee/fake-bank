@@ -73,6 +73,12 @@ namespace Bank.Data
             CurrentUser = null;
         }
 
+        public void Logout()
+        {
+            LoggedIn = false;
+            CurrentUser = null;
+        }
+
         public bool DoesUserExist(string username) =>
             Users.FirstOrDefault(x => x.Username == username) != null;
 

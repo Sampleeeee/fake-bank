@@ -17,6 +17,7 @@ Styling based off https://github.com/jakejarvis/kitboga-bank
     - You may need to set the file extension to .* (All Files)
 3. On a new line add `127.0.0.1 yourwebsite.com`
     - Some TLDs such as `.bank` require a secure connection, for this you need to setup an ssl.
+    - You will also need to change `profiles.Bank.applicationUrl` from `"http://localhost:80"` to `"https://localhost:443"`
 4. Save the file
 
 # Configuration

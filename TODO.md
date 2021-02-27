@@ -30,4 +30,4 @@
 	- [x] Backend Functionality
 - [ ] Other
     - [ ] Inactivity Screen
-    - [ ] Themes
+    - [x] Themes

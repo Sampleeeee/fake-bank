@@ -53,7 +53,7 @@ namespace Bank.Data
                     DateTime.Now.AddDays(-DaysBack);
 
                 public string FormattedAmount =>
-                    string.Format("$ {0:n}", Amount);
+                    string.Format("${0:n}", Amount);
 
                 public Transaction(string description, string type, float amount, int daysBack = -1)
                 {

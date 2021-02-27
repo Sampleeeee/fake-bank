@@ -12,6 +12,7 @@ namespace Bank.Data
                 PrimaryBackgroundColor = "#8bc34a",
                 SecondaryBackgroundColor = "#4caf50",
                 ButtonGroupAnchorColor = "white",
+                ButtonGroupColor = "#8bc34a",
                 AnchorColor = "blue",
                 AnchorColor2 = "cyan",
                 PreheaderAnchorColor = "black",
@@ -26,6 +27,7 @@ namespace Bank.Data
                 UseAdvertisement = false,
                 UseInbox = true,
                 SidebarPosition = SidebarPosition.Left,
+                AccountInfoStyle = AccountInfoStyle.Modern,
             },
             new Theme
             {
@@ -33,6 +35,7 @@ namespace Bank.Data
                 PrimaryBackgroundColor = "red",
                 SecondaryBackgroundColor = "darkred",
                 ButtonGroupAnchorColor = "white",
+                ButtonGroupColor = "red",
                 AnchorColor = "blue",
                 AnchorColor2 = "cyan",
                 PreheaderAnchorColor = "white",
@@ -46,7 +49,8 @@ namespace Bank.Data
                 UseQuickLinks = false,
                 UseAdvertisement = true,
                 UseInbox = true,
-                SidebarPosition = SidebarPosition.Right
+                SidebarPosition = SidebarPosition.Right,
+                AccountInfoStyle = AccountInfoStyle.Compact,
             }
         };
 
@@ -79,6 +83,11 @@ namespace Bank.Data
         /// ex. <see cref="Shared.Components.Account.ButtonGroup" />
         /// </summary>
         public string ButtonGroupAnchorColor { get; set; }
+
+        /// <summary>
+        /// Color for all <see cref="Shared.Components.ButtonGroup" />
+        /// </summary>
+        public string ButtonGroupColor { get; set; }
 
         /// <summary>
         /// Color of links
@@ -151,11 +160,21 @@ namespace Bank.Data
         /// </summary>
         public SidebarPosition SidebarPosition { get; set; }
 
+        /// <summary>
+        /// Style of the <see cref="Shared.Components.Account.AccountInfo" />
+        /// </summary>
+        public AccountInfoStyle AccountInfoStyle { get; set; }
+
         public Theme() { }
     }
 
     public enum SidebarPosition
     {
         Left, Right
+    }
+
+    public enum AccountInfoStyle
+    {
+        Modern, Compact
     }
 }

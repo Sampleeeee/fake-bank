@@ -32,24 +32,11 @@ namespace Bank.Shared.Components.Homepage.Dog
         private string mathProblem = string.Empty;
         private bool showBadcode = false;
 
-        private string HeadlineText =>
-            Brain.Get("Dog Headline Title");
-
-        private string HeadlineContent =>
-            Brain.Get("Dog Headline Text");
-
-        private string MobileText =>
-            Brain.Get("Mobile Banking");
-
-        private void ShowTwoFactor()
-        {
+        private void ShowTwoFactor() =>
             showTwoFactor = true;
-        }
 
-        private void HideTwoFactor()
-        {
+        private void HideTwoFactor() =>
             showTwoFactor = false;
-        }
 
         private void ShowMath()
         {
@@ -58,11 +45,8 @@ namespace Bank.Shared.Components.Homepage.Dog
             mathProblem = MathProblems[new Random().Next(MathProblems.Count)];
         }
 
-        private void HideMath()
-        {
-            showBadcode = false;
+        private void HideMath() =>
             showMathProblem = false;
-        }
 
         private async Task SubmitMathProblem()
         {

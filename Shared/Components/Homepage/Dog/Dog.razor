@@ -10,7 +10,8 @@
                             <option>Business</option>
                             <option>Investing</option>
                         </select>
-                        <input type="text" placeholder="username" style="@usernameStyle" @onchange="@(e => Username = e.Value.ToString())">
+                        <input type="text" placeholder="username" style="@usernameStyle"
+                            @onchange="@(e => Username = e.Value.ToString())">
                         <input type="password" style="margin-top: 8px" placeholder="password">
                         @if (showLoading)
                         {
@@ -23,12 +24,12 @@
                 </div>
             </div>
             <div class="col-md-8 headline">
-                <h1 style="font-size: 2rem;">@HeadlineText</h1>
-                <h4>@HeadlineContent</h4>
+                <h1 style="font-size: 2rem;">@Brain.Dog.Title</h1>
+                <h4>@Brain.Dog.Text</h4>
                 <br />
                 <div id="mobile" class="darker">
                     <h3>Mobile App</h3>
-                    <p>@MobileText</p>
+                    <p>@Brain.MobileBanking</p>
                     <a class="a-style" style="color: cyan">Try Mobile Banking</a>
                 </div>
             </div>

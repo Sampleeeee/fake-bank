@@ -10,9 +10,6 @@ namespace Bank.Shared.Components.Navbar
         [Inject] private NavigationManager Navigation { get; set; }
         [Inject] private BrainService Brain { get; set; }
 
-        private string BankName =>
-            Brain.Get("Bank Name");
-
         protected override void OnInitialized()
         {
             Navigation.LocationChanged += (_, _) =>

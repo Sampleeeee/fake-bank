@@ -7,8 +7,5 @@ namespace Bank.Shared.Components.Footer
     public partial class Footer
     {
         [Inject] private BrainService Brain { get; set; }
-
-        private string Copyright =>
-            Brain.Get("Copyright");
     }
 }

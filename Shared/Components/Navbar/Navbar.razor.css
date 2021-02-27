@@ -1,20 +1,47 @@
-header {
-    padding: 4px 8px;
-    border-bottom: 1px solid #ccc;
-    font-family: "Abril Fatface";
-}
-
-header .header-menu {
+.header-menu {
     padding-top: 0.5em;
     margin-left: 2em;
 }
-
-header .header-menu nav ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-header .header-menu nav ul li a {
+.header-menu a {
     color: #1b1b1b;
     font-family: "poppins";
+}
+.header-menu li.nav-item:first-of-type {
+    border-left: none;
+}
+.header-menu li.nav-item {
+    border-right: none;
+}
+
+.menu Anchor {
+    font-family: Tahoma, Verdana;
+}
+
+.menu {
+    background-color: #fff;
+}
+
+li.nav-item:first-of-type {
+    border-left: 1px solid #000;
+}
+li.nav-item {
+    border-right: 1px solid #000;
+}
+
+.modern {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-family: Tahoma, Verdana;
+}
+
+.modern li.nav-item:first-of-type {
+    border-left: none;
+}
+
+.modern li.nav-item {
+    border-right: none;
+}
+
+.modern {
+    border-bottom: 2px solid #ccc;
 }

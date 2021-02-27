@@ -28,6 +28,7 @@ namespace Bank.Data
                 UseInbox = true,
                 SidebarPosition = SidebarPosition.Left,
                 AccountInfoStyle = AccountInfoStyle.Modern,
+                NavbarStyle = NavbarStyle.Modern,
             },
             new Theme
             {
@@ -40,7 +41,7 @@ namespace Bank.Data
                 AnchorColor2 = "cyan",
                 PreheaderAnchorColor = "white",
                 HeaderAnchorColor = "black",
-                HeaderNameColor = "white",
+                HeaderNameColor = "black",
                 FooterColor = "#eee",
                 FooterTextColor = "black",
                 LoginBoxColor = "#202020b3",
@@ -51,6 +52,7 @@ namespace Bank.Data
                 UseInbox = true,
                 SidebarPosition = SidebarPosition.Right,
                 AccountInfoStyle = AccountInfoStyle.Compact,
+                NavbarStyle = NavbarStyle.Modern,
             }
         };
 
@@ -165,6 +167,11 @@ namespace Bank.Data
         /// </summary>
         public AccountInfoStyle AccountInfoStyle { get; set; }
 
+        /// <summary>
+        /// The style of the <see cref="Shared.Components.Navbar" />
+        /// </summary>
+        public NavbarStyle NavbarStyle { get; set; }
+
         public Theme() { }
     }
 
@@ -176,5 +183,12 @@ namespace Bank.Data
     public enum AccountInfoStyle
     {
         Modern, Compact
+    }
+
+    public enum NavbarStyle
+    {
+        Modern,
+        Basic,
+        Seperated
     }
 }

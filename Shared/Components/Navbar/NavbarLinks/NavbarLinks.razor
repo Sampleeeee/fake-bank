@@ -1,0 +1,34 @@
+@inject BrainService Brain
+
+@if (!Brain.LoggedIn)
+{
+    <li class="nav-item">
+        <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">Personal</Anchor>
+    </li>
+    <li class="nav-item">
+        <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">Business</Anchor>
+    </li>
+    <li class="nav-item">
+        <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">Investing
+        </Anchor>
+    </li>
+    <li class="nav-item">
+        <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">Contact</Anchor>
+    </li>
+    <li class="nav-item">
+        <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">About</Anchor>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link" Location="/account">Accounts</Anchor>
+    </li>
+    <li class="nav-item">
+        <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link" Location="/transactions/-1">Transactions
+        </Anchor>
+    </li>
+    <li class="nav-item">
+        <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link" Location="/transfer">Transfer</Anchor>
+    </li>
+}

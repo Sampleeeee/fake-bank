@@ -13,7 +13,7 @@ Styling based off https://github.com/jakejarvis/kitboga-bank
 
 # Setting Up a Fake Domain
 1. Open Notepad (or any other text editor) as administrator.
-2. Open file C:\Windows\System32\drivers\etc\hosts
+2. Open file `C:\Windows\System32\drivers\etc\hosts`
     - You may need to set the file extension to .* (All Files)
 3. On a new line add `127.0.0.1 yourwebsite.com`
     - Some TLDs such as `.bank` require a secure connection, for this you need to setup an ssl.

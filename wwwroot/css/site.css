@@ -3,11 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Fira Sans|Roboto&display=swap");
 
-:root {
-    --primary-bg-color: #8bc34a;
-    --secondary-bg-color: #4caf50;
-}
-
 body {
     background-color: #fff;
     font-family: "Poppins";
@@ -57,7 +52,6 @@ ul.vertical {
 ul.vertical li {
     width: 100%;
     padding: 0.8em;
-    background-color: var(--primary-bg-color);
     color: white;
 }
 

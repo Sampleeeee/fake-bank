@@ -1,29 +1,30 @@
 @inject NavigationManager Navigation
+@inject BrainService Brain
 
 <div id="filler">
     <div class="row">
         <ul class="vertical">
-            <li>
+            <li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor)">
                 <span class="oi" data-glyph="book"></span>
                 <Anchor Color="white" Location="/transactions/-1">All transactions</Anchor>
             </li>
-            <li>
+            <li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor)">
                 <span class="oi" data-glyph="calculator"></span>
                 <Anchor Color="white" Location="/transfer">Make a transfer</Anchor>
             </li>
-            <li>
+            <li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor)">
                 <span class="oi" data-glyph="briefcase"></span>
                 <Anchor Color="white">Contact Support</Anchor>
             </li>
-            <li>
+            <li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor)">
                 <span class="oi" data-glyph="info"></span>
                 <Anchor Color="white">Edit or add alerts</Anchor>
             </li>
-            <li>
+            <li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor)">
                 <span class="oi" data-glyph="document"></span>
                 <Anchor Color="white">Go paperless</Anchor>
             </li>
-            <li>
+            <li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor)">
                 <span class="oi" data-glyph="grid-three-up"></span>
                 <Anchor Color="white">Edit profile</Anchor>
             </li>

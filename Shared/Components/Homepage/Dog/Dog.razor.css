@@ -23,9 +23,7 @@
     /* IE6-9 */
 }
 .dog .epic {
-    background-color: #202020b3;
     padding: 2em;
-    border-bottom: 10px solid var(--primary-bg-color);
     position: absolute;
     top: 1.8em;
 }

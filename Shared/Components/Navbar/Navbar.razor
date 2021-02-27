@@ -1,10 +1,11 @@
 @namespace Bank.Shared.Components.Navbar
 
-<header>
+<header
+    style='@($"background-color: {Brain.CurrentTheme.PrimaryBackgroundColor}; color: {Brain.CurrentTheme.HeaderAnchorColor}")'>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2 style="margin-top: 8px">@Brain.BankName</h2>
+                <h2 style='@($"margin-top: 8px; color: {Brain.CurrentTheme.HeaderNameColor}")'>@Brain.BankName</h2>
             </div>
             <div class="header-menu">
                 <nav>
@@ -12,31 +13,35 @@
                         @if (!Brain.LoggedIn)
                         {
                             <li class="nav-item">
-                                <Anchor Class="nav-link">Personal</Anchor>
+                                <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">Personal</Anchor>
                             </li>
                             <li class="nav-item">
-                                <Anchor Class="nav-link">Business</Anchor>
+                                <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">Business</Anchor>
                             </li>
                             <li class="nav-item">
-                                <Anchor Class="nav-link">Investing</Anchor>
+                                <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">Investing
+                                </Anchor>
                             </li>
                             <li class="nav-item">
-                                <Anchor Class="nav-link">Contact</Anchor>
+                                <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">Contact</Anchor>
                             </li>
                             <li class="nav-item">
-                                <Anchor Class="nav-link">About</Anchor>
+                                <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link">About</Anchor>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <Anchor Color="black" Class="nav-link" Location="/account">Accounts</Anchor>
+                                <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link"
+                                    Location="/account">Accounts</Anchor>
                             </li>
                             <li class="nav-item">
-                                <Anchor Color="black" Class="nav-link" Location="/transactions/-1">Transactions</Anchor>
+                                <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link"
+                                    Location="/transactions/-1">Transactions</Anchor>
                             </li>
                             <li class="nav-item">
-                                <Anchor Color="black" Class="nav-link" Location="/transactions/-1">Transfer</Anchor>
+                                <Anchor Color="@("Brain.CurrentTheme.HeaderAnchorColor")" Class="nav-link"
+                                    Location="/transactions/-1">Transfer</Anchor>
                             </li>
                         }
                     </ul>

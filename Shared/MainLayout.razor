@@ -5,9 +5,11 @@
 @using Bank.Shared.Components.Navbar
 @using Bank.Shared.Components.Footer
 
-@using System.Timers
+@if (Brain.CurrentTheme.ShowPreheader)
+{
+    <Preheader />
+}
 
-<Preheader />
 <Navbar />
 @Body
 <Footer />
@@ -19,7 +21,7 @@
         <p>Please wait a moment and log back in. </p>
         <p>
             To return to the login page
-            <Anchor Color="cyan" OnClick="@(e => Brain.InactivityDismissed())">
+            <Anchor Color="@(Brain.CurrentTheme.AnchorColor2)">
                 click here
             </Anchor>.
         </p>

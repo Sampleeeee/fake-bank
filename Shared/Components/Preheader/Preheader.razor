@@ -1,12 +1,20 @@
-<div class="preheader">
+@inject BrainService Brain
+
+<div class="preheader" style='@($"background-color: {Brain.CurrentTheme.SecondaryBackgroundColor}")'>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <nav>
                     <ul>
-                        <li>Products</li>
-                        <li>Services</li>
-                        <li>Help</li>
+                        <li>
+                            <Anchor Color="@(Brain.CurrentTheme.PreheaderAnchorColor)">Products</Anchor>
+                        </li>
+                        <li>
+                            <Anchor Color="@(Brain.CurrentTheme.PreheaderAnchorColor)">Services</Anchor>
+                        </li>
+                        <li>
+                            <Anchor Color="@(Brain.CurrentTheme.PreheaderAnchorColor)">Help</Anchor>
+                        </li>
                     </ul>
                 </nav>
             </div>

@@ -3,13 +3,13 @@
 @if (Account != null)
 {
     <div class="container">
-        <div id="table-header">
+        <div id="table-header" style="background-color: @(Brain.CurrentTheme.SecondaryBackgroundColor)">
             <div class="row">
                 <div class="col-sm-8">
-                    <h2>@($"Account ****{Account.Last4Digits} History")</h2>
+                    <h2 style="color: @(Brain.CurrentTheme.PreheaderAnchorColor)">@($"Account ****{Account.Last4Digits} History")</h2>
                 </div>
                 <div class="col-sm-4">
-                    <h5>@($"Available Balance: {Account.FormattedBalance}")</h5>
+                    <h5 style="color: @(Brain.CurrentTheme.PreheaderAnchorColor)">@($"Available Balance: {Account.FormattedBalance}")</h5>
                 </div>
             </div>
         </div>
@@ -47,10 +47,10 @@
 else if (Digits == -1)
 {
     <div class="container">
-        <div id="table-header">
+        <div id="table-header" style="background-color: @(Brain.CurrentTheme.SecondaryBackgroundColor)">
             <div class="row">
                 <div class="col-sm-8">
-                    <h2>@($"Account History")</h2>
+                    <h2 style="color: @(Brain.CurrentTheme.PreheaderAnchorColor)">@($"Account History")</h2>
                 </div>
             </div>
         </div>

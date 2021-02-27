@@ -2,7 +2,8 @@
     <div class="container">
         <div id="sideswap" class="row">
             <div class="col-md-4">
-                <div class="epic">
+                <div class="epic"
+                    style="background-color: @(Brain.CurrentTheme.LoginBoxColor); border-bottom: 10px solid @(Brain.CurrentTheme.PrimaryBackgroundColor);">
                     <form>
                         <h4 class="ltitle">Online Banking</h4>
                         <select>
@@ -20,7 +21,7 @@
                     </form>
                     <div class="spacer"></div>
                     <button @onclick="@(e => OnLoginClicked())">Login</button>
-                    <Anchor Color="var(--secondary-bg-color)" Style="margin-left 0.5em">Apply Today</Anchor>
+                    <Anchor Color="@(Brain.CurrentTheme.AnchorColor2)" Style="margin-left 0.5em">Apply Today</Anchor>
                 </div>
             </div>
             <div class="col-md-8 headline">

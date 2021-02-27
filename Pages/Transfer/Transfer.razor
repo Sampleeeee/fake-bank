@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group row">
                     @* TODO Center this in button *@
-                    <a class="a-style col-sm-4 a-style" style="color: blue">Add External Account</a>
+                    <Anchor Class="col-sm-4">Add External Account</Anchor>
                     @* TODO Make button have correct size *@
                     <button class="col-sm-8 btn" type="button" @onclick="@(async e => await OnSubmit())">Submit</button>
                 </div>
@@ -48,19 +48,18 @@
             <div id="filler" style="margin-left: 1em">
                 <div class="row">
                     <ul id="vert">
-                        @* TODO Change routes *@
+                        @* TODO Change links to places that make more sense *@
                         <li>
                             <span class="oi" data-glyph="book"></span>
-                            <a class="a-style" @onclick='@(e => Navigation.NavigateTo("/transactions/-1"))'>All
-                                transactions</a>
+                            <Anchor Location="/transactions/-1">All transactions</Anchor>
                         </li>
                         <li>
                             <span class="oi" data-glyph="calculator"></span>
-                            <a class="a-style">Make a transfer</a>
+                            <Anchor Color="white">Make a transfer</Anchor>
                         </li>
                         <li>
                             <span class="oi" data-glyph="briefcase"></span>
-                            <a class="a-style">Contact support</a>
+                            <Anchor Color="white">Contact Support</Anchor>
                         </li>
                     </ul>
                 </div>

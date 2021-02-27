@@ -20,17 +20,18 @@
                     </form>
                     <div class="spacer"></div>
                     <button @onclick="@(e => OnLoginClicked())">Login</button>
-                    <a class="a-style" style="color: var(--secondary-bg-color); margin-left: 0.5em">Apply Today</a>
+                    <Anchor Color="var(--secondary-bg-color)" Style="margin-left 0.5em">Apply Today</Anchor>
                 </div>
             </div>
             <div class="col-md-8 headline">
+                @* FIXME Sometimes can't see the text here because of the background, add a shadow or something *@
                 <h1 style="font-size: 2rem;">@Brain.Dog.Title</h1>
                 <h4>@Brain.Dog.Text</h4>
                 <br />
                 <div id="mobile" class="darker">
                     <h3>Mobile App</h3>
                     <p>@Brain.MobileBanking</p>
-                    <a class="a-style" style="color: cyan">Try Mobile Banking</a>
+                    <Anchor Color="Cyan">Try Mobile Banking</Anchor>
                 </div>
             </div>
         </div>

@@ -12,34 +12,31 @@
                         @if (!Brain.LoggedIn)
                         {
                             <li class="nav-item">
-                                <a class="a-style nav-link">Personal</a>
+                                <Anchor Class="nav-link">Personal</Anchor>
                             </li>
                             <li class="nav-item">
-                                <a class="a-style nav-link">Business</a>
+                                <Anchor Class="nav-link">Business</Anchor>
                             </li>
                             <li class="nav-item">
-                                <a class="a-style nav-link">Investing</a>
+                                <Anchor Class="nav-link">Investing</Anchor>
                             </li>
                             <li class="nav-item">
-                                <a class="a-style nav-link">Contact</a>
+                                <Anchor Class="nav-link">Contact</Anchor>
                             </li>
                             <li class="nav-item">
-                                <a class="a-style nav-link">About</a>
+                                <Anchor Class="nav-link">About</Anchor>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="a-style nav-link"
-                                    @onclick="@(e => Navigation.NavigateTo("/account"))">Accounts</a>
+                                <Anchor Color="black" Class="nav-link" Location="/account">Accounts</Anchor>
                             </li>
                             <li class="nav-item">
-                                <a class="a-style nav-link"
-                                    @onclick="@(e => Navigation.NavigateTo("/transactions/-1"))">Transactions</a>
+                                <Anchor Color="black" Class="nav-link" Location="/transactions/-1">Transactions</Anchor>
                             </li>
                             <li class="nav-item">
-                                <a class="a-style nav-link"
-                                    @onclick="@(e => Navigation.NavigateTo("/transfer"))">Transfer</a>
+                                <Anchor Color="black" Class="nav-link" Location="/transactions/-1">Transfer</Anchor>
                             </li>
                         }
                     </ul>

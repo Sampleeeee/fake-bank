@@ -68,8 +68,3 @@ ul.vertical li span {
 ul.vertical li a {
     color: #fff;
 }
-
-.a-style:hover {
-    text-decoration: underline !important;
-    cursor: pointer;
-}

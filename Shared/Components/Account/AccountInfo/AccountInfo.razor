@@ -16,16 +16,16 @@
                     <div class="col-md-4">
                         <ul class="vertical">
                             <li>
-                                <a class="a-style" @onclick="@(e => ViewTransactions(account.Last4Digits))">View
-                                    transactions</a>
+                                <Anchor Color="white" Location='@($"/transactions/{account.Last4Digits}")'>View transactions
+                                </Anchor>
                                 <span class="oi" data-glyph="caret-right"></span>
                             </li>
                             <li>
-                                <a class="a-style" @onclick="@(e => MakeTransfer())">Make a transfer</a>
+                                <Anchor Color="white" Location="/transfer">Make a transfer</Anchor>
                                 <span class="oi" data-glyph="caret-right"></span>
                             </li>
                             <li>
-                                <a class="a-style moreactions">More actions</a>
+                                <Anchor Color="white">More actions</Anchor>
                                 <span class="oi" data-glyph="caret-right"></span>
                             </li>
                         </ul>

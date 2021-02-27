@@ -2,11 +2,26 @@
     width: 100%;
 }
 
+#accounts {
+    border: 1px solid #ccc;
+}
+
+#activity-list {
+    border: 2px solid #ececec;
+    padding: 1em;
+}
+
+#recent-box {
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+}
+
 .account-row {
-    border-top: 4px solid var(--secondary-bg-color);
     margin-bottom: 2em;
     background-color: #f5f5f5;
 }
+
 .account-row h5 span {
     color: #ccc;
     font-size: 0.7em;

@@ -1,36 +1,97 @@
-<div class="row">
-    <div id="account-info">
-        @foreach (User.Account account in Brain.GetCurrentAccounts())
-        {
-            <div class="account-row">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h5>
-                            @account.Name
-                            <span>@($"XXXX{account.Last4Digits}")</span>
-                        </h5>
-                        <hr />
-                        <h1>@account.FormattedBalance</h1>
-                    </div>
-
-                    <div class="col-md-4">
-                        <ButtonGroup>
-                            <ButtonGroupItem>
-                                <Anchor Color="@(Brain.CurrentTheme.ButtonGroupAnchorColor)"
-                                    Location='@($"/transactions/{account.Last4Digits}")'>View transactions
-                                </Anchor>
-                            </ButtonGroupItem>
-                            <ButtonGroupItem>
-                                <Anchor Color="@(Brain.CurrentTheme.ButtonGroupAnchorColor)" Location="/transfer">Make a
-                                    transfer</Anchor>
-                            </ButtonGroupItem>
-                            <ButtonGroupItem>
-                                <Anchor Color="@(Brain.CurrentTheme.ButtonGroupAnchorColor)">More actions</Anchor>
-                            </ButtonGroupItem>
-                        </ButtonGroup>
+@if (Brain.CurrentTheme.AccountInfoStyle == AccountInfoStyle.Modern)
+{
+    <div class="row">
+        <div id="account-info">
+            @foreach (User.Account account in Brain.GetCurrentAccounts())
+            {
+                <div class="account-row">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5>
+                                @account.Name
+                                <span>@($"XXXX{account.Last4Digits}")</span>
+                            </h5>
+                            <hr />
+                            <h1>@account.FormattedBalance</h1>
+                        </div>
+                        <div class="col-md-4">
+                            <ButtonGroup>
+                                <ButtonGroupItem>
+                                    <Anchor Color="@(Brain.CurrentTheme.ButtonGroupAnchorColor)"
+                                        Location='@($"/transactions/{account.Last4Digits}")'>View transactions
+                                    </Anchor>
+                                </ButtonGroupItem>
+                                <ButtonGroupItem>
+                                    <Anchor Color="@(Brain.CurrentTheme.ButtonGroupAnchorColor)" Location="/transfer">Make a
+                                        transfer</Anchor>
+                                </ButtonGroupItem>
+                                <ButtonGroupItem>
+                                    <Anchor Color="@(Brain.CurrentTheme.ButtonGroupAnchorColor)">More actions</Anchor>
+                                </ButtonGroupItem>
+                            </ButtonGroup>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
-</div>
+}
+else if (Brain.CurrentTheme.AccountInfoStyle == AccountInfoStyle.Compact)
+{
+    <div class="row">
+        <table id="accounts" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Account Number</th>
+                    <th>Available Balance</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (User.Account account in Brain.GetCurrentAccounts())
+                {
+                    <tr>
+                        <td>
+                            <Anchor Location='@($"/transactions/{account.Last4Digits}")'>
+                                @account.Name
+                            </Anchor>
+                        </td>
+                        <td>XXXX@(account.Last4Digits)</td>
+                        <td>@(account.FormattedBalance)</td>
+                        <td>
+                            <Anchor Location="/transfer">Transfer</Anchor>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div id="activity-list" class="row">
+        <h4>Your most recent transactions:</h4>
+        <hr>
+        <div id="recent-box">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (User.Account.Transaction transaction in AllTransactions().OrderByDescending(x => x.Date))
+                    {
+                        <tr>
+                            <td>@transaction.Date.ToString("MM/dd")</td>
+                            <td>@transaction.Description</td>
+                            <td>@transaction.Type</td>
+                            <td>@transaction.FormattedAmount</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}

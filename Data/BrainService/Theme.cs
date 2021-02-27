@@ -22,6 +22,9 @@ namespace Bank.Data
                 LoginBoxColor = "#202020b3",
                 RatesBackgroundColor = "##fff8ea",
                 ShowPreheader = true,
+                UseQuickLinks = true,
+                UseAdvertisement = false,
+                UseInbox = true,
             },
             new Theme
             {
@@ -39,6 +42,9 @@ namespace Bank.Data
                 LoginBoxColor = "#202020b3",
                 RatesBackgroundColor = "#fff8ea",
                 ShowPreheader = false,
+                UseQuickLinks = false,
+                UseAdvertisement = true,
+                UseInbox = true,
             }
         };
 
@@ -122,6 +128,21 @@ namespace Bank.Data
         /// Should we show the preheader?
         /// </summary>
         public bool ShowPreheader { get; set; }
+
+        /// <summary>
+        /// Should the <see cref="Shared.Components.Account.QuickLinks" /> display?
+        /// </summary>
+        public bool UseQuickLinks { get; set; }
+
+        /// <summary>
+        /// Should the <see cref="Shared.Components.Account.Advertisement" /> display?
+        /// </summary>
+        public bool UseAdvertisement { get; set; }
+
+        /// <summary>
+        /// Should the <see cref="Shared.Components.Account.Inbox" /> display?
+        /// </summary>
+        public bool UseInbox { get; set; }
 
         public Theme() { }
     }

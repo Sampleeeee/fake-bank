@@ -17,14 +17,18 @@
 
         <div id="main-row" class="row">
             <div class="col-md-4">
-                @*
-                    TODO Only show either QuickLinks or Advertisement
-                    Can be done once themes are implemented
-                *@
-                <Inbox />
-                <QuickLinks />
-                <Advertisement />
-                @* <button class="btn-warning">Contact Support</button> *@
+                @if (Brain.CurrentTheme.UseInbox)
+                {
+                    <Inbox />
+                }
+                @if (Brain.CurrentTheme.UseQuickLinks)
+                {
+                    <QuickLinks />
+                }
+                @if (Brain.CurrentTheme.UseAdvertisement)
+                {
+                    <Advertisement />
+                }
             </div>
             <div class="col-md-8">
                 <div id="filler">
@@ -33,19 +37,19 @@
                             <ButtonGroupItem Glyph="book" Style="@BgStyle">
                                 <Anchor Color="white" Location="/transactions/-1">All transactions</Anchor>
                             </ButtonGroupItem>
-                            <ButtonGroupItem Glyph="calculator" Style='@($"{BgStyle} border-right: none;")'>
+                            <ButtonGroupItem Glyph="calculator" Style="@BgStyle">
                                 <Anchor Color="white" Location="/transfer">Make a transfer</Anchor>
                             </ButtonGroupItem>
                             <ButtonGroupItem Glyph="briefcase" Style="@BgStyle">
                                 <Anchor Color="white">Contact Support</Anchor>
                             </ButtonGroupItem>
-                            <ButtonGroupItem Glyph="info" Style='@($"{BgStyle} border-right: none;")'>
+                            <ButtonGroupItem Glyph="info" Style="@BgStyle">
                                 <Anchor Color="white">Edit or add alerts</Anchor>
                             </ButtonGroupItem>
                             <ButtonGroupItem Glyph="document" Style="@BgStyle">
                                 <Anchor Color="white">Go paperless</Anchor>
                             </ButtonGroupItem>
-                            <ButtonGroupItem Glyph="grid-three-up" Style='@($"{BgStyle} border-right: none;")'>
+                            <ButtonGroupItem Glyph="grid-three-up" Style="@BgStyle">
                                 <Anchor Color="white">Edit profile</Anchor>
                             </ButtonGroupItem>
                         </ButtonGroup>

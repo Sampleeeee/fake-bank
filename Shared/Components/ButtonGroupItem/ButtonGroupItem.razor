@@ -1,0 +1,11 @@
+<li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor); @Style" class="@Class">
+    @if (!string.IsNullOrEmpty(Glyph) && GlyphPosition == GlyphPosition.Left)
+    {
+        <span class="oi" data-glyph="@Glyph"></span>
+    }
+    @ChildContent
+    @if (!string.IsNullOrEmpty(Glyph) && GlyphPosition == GlyphPosition.Right)
+    {
+        <span class="oi" data-glyph="@Glyph"></span>
+    }
+</li>

@@ -42,23 +42,3 @@ nav a {
     right: 0.75rem;
     top: 0.5rem;
 }
-
-ul.vertical {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-ul.vertical li {
-    width: 100%;
-    padding: 0.8em;
-    color: white;
-}
-
-ul.vertical li span {
-    float: right;
-}
-
-ul.vertical li a {
-    color: #fff;
-}

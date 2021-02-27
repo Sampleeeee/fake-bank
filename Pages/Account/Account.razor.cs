@@ -14,5 +14,8 @@ namespace Bank.Pages.Account
             .AddHours(-4)
             .AddMinutes(-27)
             .AddSeconds(-58);
+
+        // FIXME this is fucking gay, why can't I just use css. This *only* works as a Style
+        private readonly string BgStyle = "width: 50%; border-bottom: 2px solid #fff;border-right: 2px solid #fff;";
     }
 }

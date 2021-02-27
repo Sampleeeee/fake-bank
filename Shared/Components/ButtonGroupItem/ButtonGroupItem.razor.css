@@ -1,0 +1,9 @@
+li {
+    width: 100%;
+    padding: 0.8em;
+    color: white;
+}
+
+li span {
+    float: right;
+}

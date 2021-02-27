@@ -2,7 +2,6 @@
 @using Bank.Shared.Components.Account.Inbox
 @using Bank.Shared.Components.Account.QuickLinks
 @using Bank.Shared.Components.Account.Advertisement
-@using Bank.Shared.Components.Account.ButtonGroup
 @using Bank.Shared.Components.Account.AccountInfo
 
 @if (Brain.GetCurrentUser() != null)
@@ -28,7 +27,30 @@
                 @* <button class="btn-warning">Contact Support</button> *@
             </div>
             <div class="col-md-8">
-                <ButtonGroup />
+                <div id="filler">
+                    <div class="row">
+                        <ButtonGroup Wrap="true">
+                            <ButtonGroupItem Glyph="book" Style="@BgStyle">
+                                <Anchor Color="white" Location="/transactions/-1">All transactions</Anchor>
+                            </ButtonGroupItem>
+                            <ButtonGroupItem Glyph="calculator" Style='@($"{BgStyle} border-right: none;")'>
+                                <Anchor Color="white" Location="/transfer">Make a transfer</Anchor>
+                            </ButtonGroupItem>
+                            <ButtonGroupItem Glyph="briefcase" Style="@BgStyle">
+                                <Anchor Color="white">Contact Support</Anchor>
+                            </ButtonGroupItem>
+                            <ButtonGroupItem Glyph="info" Style='@($"{BgStyle} border-right: none;")'>
+                                <Anchor Color="white">Edit or add alerts</Anchor>
+                            </ButtonGroupItem>
+                            <ButtonGroupItem Glyph="document" Style="@BgStyle">
+                                <Anchor Color="white">Go paperless</Anchor>
+                            </ButtonGroupItem>
+                            <ButtonGroupItem Glyph="grid-three-up" Style='@($"{BgStyle} border-right: none;")'>
+                                <Anchor Color="white">Edit profile</Anchor>
+                            </ButtonGroupItem>
+                        </ButtonGroup>
+                    </div>
+                </div>
                 <AccountInfo />
             </div>
         </div>

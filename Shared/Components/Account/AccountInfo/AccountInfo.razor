@@ -14,23 +14,20 @@
                     </div>
 
                     <div class="col-md-4">
-                        <ul class="vertical">
-                            <li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor)">
+                        <ButtonGroup>
+                            <ButtonGroupItem>
                                 <Anchor Color="@(Brain.CurrentTheme.ButtonGroupAnchorColor)"
                                     Location='@($"/transactions/{account.Last4Digits}")'>View transactions
                                 </Anchor>
-                                <span class="oi" data-glyph="caret-right"></span>
-                            </li>
-                            <li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor)">
+                            </ButtonGroupItem>
+                            <ButtonGroupItem>
                                 <Anchor Color="@(Brain.CurrentTheme.ButtonGroupAnchorColor)" Location="/transfer">Make a
                                     transfer</Anchor>
-                                <span class="oi" data-glyph="caret-right"></span>
-                            </li>
-                            <li style="background-color: @(Brain.CurrentTheme.PrimaryBackgroundColor)">
+                            </ButtonGroupItem>
+                            <ButtonGroupItem>
                                 <Anchor Color="@(Brain.CurrentTheme.ButtonGroupAnchorColor)">More actions</Anchor>
-                                <span class="oi" data-glyph="caret-right"></span>
-                            </li>
-                        </ul>
+                            </ButtonGroupItem>
+                        </ButtonGroup>
                     </div>
                 </div>
             </div>

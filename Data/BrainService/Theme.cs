@@ -25,6 +25,7 @@ namespace Bank.Data
                 UseQuickLinks = true,
                 UseAdvertisement = false,
                 UseInbox = true,
+                SidebarPosition = SidebarPosition.Left,
             },
             new Theme
             {
@@ -45,6 +46,7 @@ namespace Bank.Data
                 UseQuickLinks = false,
                 UseAdvertisement = true,
                 UseInbox = true,
+                SidebarPosition = SidebarPosition.Right
             }
         };
 
@@ -144,6 +146,16 @@ namespace Bank.Data
         /// </summary>
         public bool UseInbox { get; set; }
 
+        /// <summary>
+        /// Where should the sidebar on the accounts page be displayed?
+        /// </summary>
+        public SidebarPosition SidebarPosition { get; set; }
+
         public Theme() { }
+    }
+
+    public enum SidebarPosition
+    {
+        Left, Right
     }
 }

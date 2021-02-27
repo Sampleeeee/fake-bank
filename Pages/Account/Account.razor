@@ -1,7 +1,5 @@
 @page "/account"
-@using Bank.Shared.Components.Account.Inbox
-@using Bank.Shared.Components.Account.QuickLinks
-@using Bank.Shared.Components.Account.Advertisement
+@using Bank.Shared.Components.Account.Sidebar
 @using Bank.Shared.Components.Account.AccountInfo
 
 @if (Brain.GetCurrentUser() != null)
@@ -16,20 +14,10 @@
         *@
 
         <div id="main-row" class="row">
-            <div class="col-md-4">
-                @if (Brain.CurrentTheme.UseInbox)
-                {
-                    <Inbox />
-                }
-                @if (Brain.CurrentTheme.UseQuickLinks)
-                {
-                    <QuickLinks />
-                }
-                @if (Brain.CurrentTheme.UseAdvertisement)
-                {
-                    <Advertisement />
-                }
-            </div>
+            @if (Brain.CurrentTheme.SidebarPosition == SidebarPosition.Left)
+            {
+                <Sidebar />
+            }
             <div class="col-md-8">
                 <div id="filler">
                     <div class="row">
@@ -57,6 +45,10 @@
                 </div>
                 <AccountInfo />
             </div>
+            @if (Brain.CurrentTheme.SidebarPosition == SidebarPosition.Right)
+            {
+                <Sidebar />
+            }
         </div>
     </div>
 }

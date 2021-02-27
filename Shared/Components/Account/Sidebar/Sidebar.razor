@@ -1,0 +1,20 @@
+@inject BrainService Brain
+@using Bank.Shared.Components.Account.Advertisement
+@using Bank.Shared.Components.Account.QuickLinks
+@using Bank.Shared.Components.Account.Inbox
+
+
+<div class="col-md-4">
+    @if (Brain.CurrentTheme.UseInbox)
+    {
+        <Inbox />
+    }
+    @if (Brain.CurrentTheme.UseQuickLinks)
+    {
+        <QuickLinks />
+    }
+    @if (Brain.CurrentTheme.UseAdvertisement)
+    {
+        <Advertisement />
+    }
+</div>

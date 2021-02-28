@@ -33,7 +33,7 @@ namespace Bank.Data
             new Theme
             {
                 Name = "Red",
-                PrimaryBackgroundColor = "red",
+                PrimaryBackgroundColor = "#c70b2d",
                 SecondaryBackgroundColor = "darkred",
                 ButtonGroupAnchorColor = "white",
                 ButtonGroupColor = "#c70b2d",

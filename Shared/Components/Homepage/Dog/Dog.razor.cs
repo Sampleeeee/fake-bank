@@ -15,10 +15,13 @@ namespace Bank.Shared.Components.Homepage.Dog
 
         private List<string> MathProblems = new List<string>
         {
-            "x⁴ + 25x³ + i√5x² - 69x + 420",
-            "let ƒ(x) = ⅞x⁹ - (52x⁴ + 2x³); what is ƒ(-512)"
+            "𝑥⁴ + 25𝑥³ + 4𝑖√(5𝑥²) - 69𝑥 + 420",
+            "let ƒ(𝑥) = ⅞𝑥⁹ - (52𝑥⁴ + 2𝑥³); what is ƒ(-512)",
+            "For 𝑥 such that 0 < 𝑥 < (π / 2), (√(1 - sin² 𝑥) / sin 𝑥)",
+            "ƒ(2𝑎) + 2ƒ(𝑏) = ƒ(ƒ(𝑎 + 𝑏)); Solve for all ƒ: 𝕫 -> 𝕫",
+            "𝑒^(π√(-1)) + 1",
+            "1 - (𝑥 - 1) / (√(𝑥 + 1)) = 9𝑥; Solve for 𝑥"
         };
-
 
         private string MathAnswerValue { get; set; } = string.Empty;
         private string TwoFactorValue { get; set; } = string.Empty;
